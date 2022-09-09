@@ -1,3 +1,8 @@
+// Fetch para recibir una frase de una personaje random de anime
+fetch('https://animechan.vercel.app/api/random')
+    .then(response => response.json())
+    .then(quote => console.log(quote))
+    
 const compra = new Carrito();
 const listaCompra = document.querySelector("#lista-compra tbody");
 const carrito = document.getElementById('carrito');
