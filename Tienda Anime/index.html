@@ -3,216 +3,248 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Tienda Anime</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">  
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+
+    <title>Carrito de Compras Tienda Anime</title>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-dark bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
-            aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </nav>
     <header>
         <div class="container">
-            <h1 class="text-center">TIENDA ANIME</h1>
-            <hr>
+            <div class="row align-items-stretch justify-content-between">
+                <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                    <a class="navbar-brand" href="#">Tienda Anime</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <img src="img/carrito.png" class="nav-link dropdown-toggle img-fluid" height="70px"
+                                    width="70px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false"></img>
+                                <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                                    <table id="lista-carrito" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+
+                                    <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+                                    <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar
+                                        Compra</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         </div>
     </header>
-    <!-- Comienzo seccion tienda -->
-    <section class="store">
-        <div class="container">
-            <div class="items">
-                <div class="row">
 
-                    <div class="col-12 col-md-6">
-                        <div class="item shadow mb-4">
-                            <h3 class="item-title">Dragon Ball</h3>
-                            <img class="item-image" src="./img/dragonball.jpg">
-
-                            <div class="item-details">
-                                <h4 class="item-price">$2200</h4>
-                                <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="item shadow mb-4">
-                            <h3 class="item-title">Dragon Ball Z</h3>
-
-                            <img class="item-image" src="./img/dragonballz.jpg">
-
-                            <div class="item-details">
-                                <h4 class="item-price">$2100</h4>
-                                <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="item shadow mb-4">
-                            <h3 class="item-title">Evangelion</h3>
-
-                            <img class="item-image" src="./img/evangelion.jpg">
-
-                            <div class="item-details">
-                                <h4 class="item-price">$2500</h4>
-                                <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="item shadow mb-4">
-                            <h3 class="item-title">Initial D</h3>
-
-                            <img class="item-image" src="./img/intiald.webp">
-
-                            <div class="item-details">
-                                <h4 class="item-price">$2000</h4>
-                                <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="item shadow mb-4">
-                            <h3 class="item-title">Naruto</h3>
-
-                            <img class="item-image" src="./img/naruto.jpg">
-                            <div class="item-details">
-                                <h4 class="item-price">$2300</h4>
-                                <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="item shadow mb-4">
-                            <h3 class="item-title">Naruto Shippuden</h3>
-
-                            <img class="item-image" src="./img/narutoshippuden.webp">
-                            <div class="item-details">
-                                <h4 class="item-price">$3000</h4>
-                                <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Fin seccion tienda -->
-
-    <!-- Comienzo seccion carrito de compras -->
-    <section class="shopping-cart">
-        <div class="container">
-            <h1 class="text-center">CARRITO</h1>
-            <hr>
-            <div class="row">
-                <div class="col-6">
-                    <div class="shopping-cart-header">
-                        <h6>Producto</h6>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="shopping-cart-header">
-                        <h6 class="text-truncate">Precio</h6>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="shopping-cart-header">
-                        <h6>Cantidad</h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="shopping-cart-items shoppingCartItemsContainer">
-            </div>
-
-            <!-- Comienzo Total -->
-            <div class="row">
-                <div class="col-12">
-                    <div class="shopping-cart-total d-flex align-items-center">
-                        <p class="mb-0">Total</p>
-                        <p class="ml-4 mb-0 shoppingCartTotal">$0</p>
-                        <div class="toast ml-auto bg-info" role="alert" aria-live="assertive" aria-atomic="true"
-                            data-delay="2000">
-                            <div class="toast-header">
-                                <span>✅</span>
-                                <strong class="mr-auto ml-1 text-secondary">Elemento en el carrito</strong>
-                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="toast-body text-white">
-                                Se aumentó correctamente la cantidad
-                            </div>
-                        </div>
-                        <button class="btn btn-success ml-auto comprarButton" type="button" data-toggle="modal"
-                            data-target="#comprarModal">Comprar</button>
-                    </div>
-                </div>
-            </div>
-
-            <!--Fin total -->
-
-            <!--Inicio compra -->
-            <div class="modal fade" id="comprarModal" tabindex="-1" aria-labelledby="comprarModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="comprarModalLabel">Gracias por su compra</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Pronto recibirá su pedido</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Fin compra -->
-
-
+    <main>
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
+            <h1 class="display-4 mt-4">Lista de Productos</h1>
+            <p class="lead">Selecciona uno de nuestros productos y accede a un descuento</p>
         </div>
 
-    </section>
-    <!-- Fin seccion carrito de compras -->
+        <div class="container" id="lista-productos">
+            
+            <div class="card-deck mb-3 text-center">
+                
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">DEATH NOTE</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/death-note-anime-cartel.jpg.webp" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$ <span class="">2500</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Demografía: Shōnen</li>
+                            <li>Autor: Tsugumi Ōba</li>
+                            <li>Género: Misterio, fantasía, sobrenatural, thriller</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="1">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">DRAGON BALL</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/DragonBall.webp" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$ <span class="">2200</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Demografía: Shōnen</li>
+                            <li>Autor: Akira Toriyama</li>
+                            <li>Género: Acción, aventura, comedia, fantasía, artes marciales</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="2">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">DRAGON BALL Z</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/dragonballz.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$ <span class="">2100</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Demografía: Shōnen</li>
+                            <li>Autor: Akira Toriyama</li>
+                            <li>Género: Acción, aventura, comedia, fantasía, artes marciales</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="3">Comprar</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card-deck mb-3 text-center">
+                
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">EVANGELION</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/Neon_Genesis_Evangelion_-_Poster.webp" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$ <span class="">2500</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Demografía: Seinen</li>
+                            <li>Autor: Hideaki Anno</li>
+                            <li>Género: Anime, Mecha, Acción, Thriller, Ciencia ficción, drama psicológico</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="4">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">FULL METAL ALCHEMIST</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/full.jpeg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$ <span class="">2600</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Demografía: Shōnen</li>
+                            <li>Autor: Hiromu Arakawa</li>
+                            <li>Género: Aventura, fantasía, ciencia ficción, drama</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="5">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">INITIAL D</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/initiald.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$ <span class="">2000</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Demografía: Seinen</li>
+                            <li>Autor: Shuichi Shigeno</li>
+                            <li>Género: Deportes (carreras), drama, acción</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="6">Comprar</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card-deck mb-3 text-center">
+                
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">KIMETSU NO YAIBA</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/kimetsu.jpeg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$ <span class="">3000</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Demografía: Shōnen</li>
+                            <li>Autor: Koyoharu Gotōge</li>
+                            <li>Género: Acción, aventura, comedia, fantasía, artes marciales</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="7">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">NARUTO</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/naruto.jpeg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$ <span class="">2300</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Demografía: Shōnen</li>
+                            <li>Autor: Masashi Kishimoto</li>
+                            <li>Género: Acción, aventura, comedia, fantasía, artes marciales</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="8">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">NARUTO SHIPPUDEN</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/narutoS.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$ <span class="">3000</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Demografía: Shōnen</li>
+                            <li>Autor: Masashi Kishimoto</li>
+                            <li>Género: Acción, aventura, comedia, fantasía, artes marciales</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="9">Comprar</a>
+                    </div>
+                </div>
+
+            </div>
 
 
-    <!--Inicio footer -->
-    <footer class="bg-dark p-3 mt-5">
-        <p class="text-center m-0 text-muted">Tienda Anime</p>
-    </footer>
-    <!--Fin footer-->
+        </div>
+    </main>
 
-
-
-
-    <!--Scripts-->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
-
-    <script src="./tienda.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/pedido.js"></script>
 
 </body>
 
